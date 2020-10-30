@@ -1,0 +1,261 @@
+:root {
+  /* Colour Palette  */
+  --pink: #f406bc;
+  --blue: #0662f4;
+  --purple: #480198;
+  --black: #231f20;
+  --grey: #d1d3d4;
+  --white: #ffffff;
+
+  /* Usage */
+  --background: var(--grey);
+  --lineColor: var(--grey);
+  --textColor: var(--black);
+  --hColor: var(--black);
+  --linkColor: var(--purple);
+
+  /* Typography */
+  --headingFont: "Montserrat", sans-serif;
+  --bodyFont: "Open Sans", sans-serif;
+  --headingWeight: 400;
+  --bodyWeight: 400;
+  --baseFontSize: 100%;
+  --h1: 3.052rem;
+  --h2: 2.441rem;
+  --h3: 1.953rem;
+  --h4: 1.563em;
+  --h5: var(--baseFontSize);
+  --smallText: 0.8em;
+
+  /* Borders */
+  --borderRadius: 6px;
+  --borderLine: 1px solid var(--lineColor);
+
+  /* Shadows */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Containers */
+  --containerMaxWidth: 100%;
+  --containerHorizontalPadding: 1.25rem;
+}
+
+/* Breakpoints */
+
+@media screen and (min-width: 640px) {
+  :root {
+    --containerMaxWidth: 640px;
+    --containerHorizontalPadding: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --containerMaxWidth: 1280px;
+  }
+}
+
+/* @media screen and (min-width: 1024px) {
+  }
+  
+  @media screen and (min-width: 1280px) {
+  } */
+
+html {
+  font-size: var(--baseFontSize);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--bodyFont);
+  font-weight: var(--bodyWeight);
+  line-height: 1.65;
+  background: var(--background);
+  color: var(--textColor);
+}
+
+*:focus {
+  outline-color: var(--pink);
+}
+
+*::selection {
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+p {
+  color: var(--textColor);
+  margin-bottom: 1.15rem;
+  max-width: 40em;
+}
+
+p a,
+blockquote a,
+a {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: 0.3s ease-in-out all;
+}
+
+h2 a,
+h3 a,
+h4 a {
+  color: var(--linkColor);
+  text-decoration: none;
+}
+
+p a:hover,
+blockquote a:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+h2 a:hover,
+h3 a:hover,
+h4 a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--hColor);
+  margin: 2.75rem 0 1.05rem;
+  font-family: var(--headingFont);
+  font-weight: var(--headingWeight);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+h4 {
+  font-size: var(--h4);
+}
+
+h5 {
+  text-transform: uppercase;
+  font-size: var(--h5);
+}
+
+li {
+  color: var(--textColor);
+  font-size: var(--baseFontSize);
+}
+
+small,
+.text_small {
+  font-size: var(--smallText);
+}
+
+hr {
+  border-top: var(--borderLine);
+}
+
+blockquote {
+  margin: 0;
+  padding: 2em;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-3);
+}
+
+/* Forms */
+
+label {
+  display: block;
+  font-size: var(--smallText);
+}
+
+input,
+textarea {
+  border: var(--borderLine);
+  border-radius: var(--borderRadius);
+  padding: 5px 4px;
+}
+
+textarea {
+  height: 5rem;
+  width: 100%;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+select {
+  border: var(--borderLine);
+  border-radius: var(--borderRadius);
+}
+
+/* */
+button {
+  --buttonBackground: var(--white);
+  --buttonTextColor: var(--white);
+
+  background: linear-gradient(0.25turn, var(--pink) 30%, var(--blue));
+  color: var(--buttonTextColor);
+  appearance: none;
+  border: none;
+  border-radius: 60px;
+  height: 50px;
+  min-width: 145px;
+  box-shadow: var(--shadow-1);
+  transition: 0.3s ease-in-out box-shadow;
+}
+
+button:hover {
+  box-shadow: var(--shadow-2);
+}
+
+button:focus {
+  outline-color: var(--primary);
+}
+
+button[disabled] {
+  opacity: 0.4;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: var(--grey);
+  opacity: 0.5;
+}
+
+.screen-reader-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.dark {
+  --background: var(--black);
+  --textColor: var(--lightGrey);
+}

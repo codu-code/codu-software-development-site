@@ -1,0 +1,23 @@
+.container {
+  --textColor: var(--white);
+  --hColor: var(--white);
+  --textColor: var(--white);
+  position: relative;
+  height: 580px;
+  background-size: cover;
+  background-image: url("/images/footer.svg");
+  padding-top: 240px;
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -50px;
+}
