@@ -4,7 +4,7 @@ import { Container } from "../";
 
 export default function Footer() {
   return (
-    <div className={styles.container}>
+    <footer className={styles.container}>
       <Container>
         <div>
           <svg width="118" height="37" viewBox="0 0 118 37" fill="none">
@@ -55,6 +55,6 @@ export default function Footer() {
           </div>
         </div>
       </Container>
-    </div>
+    </footer>
   );
 }

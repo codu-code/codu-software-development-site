@@ -1,0 +1,49 @@
+.container {
+  margin-top: 350px;
+  margin-bottom: 400px;
+  background: var(--white);
+  padding: 40px 0;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  background-image: url("/images/blogtop.svg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 350px;
+  top: -348px;
+}
+
+.container::after {
+  content: "";
+  background-image: url("/images/blogbottom.svg");
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 400px;
+  bottom: -398px;
+}
+
+.title {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.postContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  gap: 30px;
+  justify-content: center;
+}
