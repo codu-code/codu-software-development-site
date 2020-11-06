@@ -5,10 +5,11 @@
   --purple: #480198;
   --black: #231f20;
   --grey: #d1d3d4;
+  --lightGrey: #f4f4f4;
   --white: #ffffff;
 
   /* Usage */
-  --background: var(--grey);
+  --background: var(--lightGrey);
   --lineColor: var(--grey);
   --textColor: var(--black);
   --hColor: var(--black);

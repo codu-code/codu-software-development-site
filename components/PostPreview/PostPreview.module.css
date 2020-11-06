@@ -1,0 +1,29 @@
+.container {
+  --h3: var(--h4);
+}
+
+.container h3 {
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.postLink {
+  color: var(--textColor);
+  text-decoration: none;
+  transition: none;
+}
+
+.image {
+  border-radius: 60px;
+}
+
+.pill {
+  --textColor: var(--pink);
+  height: 32px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffd3f5;
+  border-radius: 50px;
+  margin: 26px 0 0;
+}
