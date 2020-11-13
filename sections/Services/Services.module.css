@@ -1,0 +1,76 @@
+.container {
+  --textColor: var(--white);
+  --hColor: var(--white);
+  background: linear-gradient(0.3turn, var(--pink) 30%, var(--blue));
+  padding: 40px 0 350px;
+  margin-bottom: -350px;
+}
+
+.title {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title > p {
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.buttonGroup > button {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  width: 250px;
+}
+
+.buttonGroup > button:first-of-type {
+  border-radius: 50px 0 0 50px;
+}
+
+.buttonGroup > button:last-of-type {
+  border-radius: 0 50px 50px 0;
+}
+
+.buttonGroup > .active {
+  background: var(--white);
+  color: var(--purple);
+}
+
+.servicesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.summaryContainer {
+  display: flex;
+  align-items: center;
+}
+
+.summary {
+  background: #210d37;
+  padding: 100px 40px 40px;
+  border-radius: 50px 0 0 50px;
+}
+
+.details {
+  --textColor: var(--black);
+  --hColor: var(--black);
+  background: var(--white);
+  border-radius: 20px;
+  min-height: 400px;
+  padding: 20px;
+}
