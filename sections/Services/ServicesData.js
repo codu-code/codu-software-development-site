@@ -1,4 +1,4 @@
-const panels = [
+export const data = [
   {
     title: "Product Planning",
     summary:
@@ -93,4 +93,9 @@ const panels = [
   },
 ];
 
-export default panels;
+export const buttons = [
+  "Product Planning",
+  "Product Development",
+  "Product Launch",
+  "Product Scaling",
+];

@@ -4,21 +4,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
 
 import styles from "./Services.module.css";
-import data from "./ServicesData";
+import { data, buttons } from "./ServicesData";
 
-const Slideshow = () => {
+export default function Services() {
   const [[panel, direction], setPanel] = useState([0, 0]);
-  const testData = ["test", "sample", "other"];
-  const index = wrap(0, testData.length, panel);
+  const index = wrap(0, data.length, panel);
 
   const paginate = (newDirection) => {
     setPanel([panel + newDirection, newDirection]);
   };
 
   const variants = {
-    enter: (direction) => {
+    enter: () => {
       return {
-        x: direction > 0 ? 1000 : -1000,
+        x: direction > 0 ? -1000 : 1000,
         opacity: 0,
       };
     },
@@ -27,7 +26,7 @@ const Slideshow = () => {
       x: 0,
       opacity: 1,
     },
-    exit: (direction) => {
+    exit: () => {
       return {
         zIndex: 0,
         x: direction < 0 ? 1000 : -1000,
@@ -40,56 +39,6 @@ const Slideshow = () => {
   const swipePower = (offset, velocity) => {
     return Math.abs(offset) * velocity;
   };
-
-  return (
-    <div style={{ position: "relative" }}>
-      <AnimatePresence initial={false} custom={direction}>
-        <motion.div
-          style={{
-            height: 400,
-            background: "blue",
-            width: "100%",
-            position: "absolute",
-            top: 0,
-            left: 0,
-          }}
-          key={panel}
-          drag="x"
-          dragElastic={1}
-          variants={variants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
-          }}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-        >
-          {testData[index]}
-        </motion.div>
-      </AnimatePresence>
-
-      <div className="next" onClick={() => paginate(1)}>
-        {"‣"}
-      </div>
-      <div className="prev" onClick={() => paginate(-1)}>
-        {"‣"}
-      </div>
-    </div>
-  );
-};
-
-export default function Services() {
-  const [panel, setActivePanel] = useState(0);
 
   const displayPanel = (key) => {
     return (
@@ -128,16 +77,52 @@ export default function Services() {
         </p>
       </div>
       <div className={styles.buttonGroup}>
-        <button className={styles.active} onClick={() => setActivePanel(0)}>
-          Product Planning
-        </button>
-        <button onClick={() => setActivePanel(1)}>Product Development</button>
-        <button onClick={() => setActivePanel(2)}>Product Launch</button>
-        <button onClick={() => setActivePanel(3)}>Product Scaling</button>
+        {buttons.map((button, i) => (
+          <button
+            key={button}
+            className={i === index ? styles.active : ""}
+            onClick={() => setPanel([i, -1])}
+          >
+            {button}
+          </button>
+        ))}
       </div>
-      {displayPanel(panel)}
 
-      <Slideshow />
+      <div style={{ position: "relative" }}>
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            dragConstraints={{ left: 0, right: 0 }}
+            style={{
+              width: "100%",
+              position: "absolute",
+              top: 0,
+              left: 0,
+            }}
+            key={panel}
+            drag="x"
+            dragElastic={1}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 },
+            }}
+            onDragEnd={(e, { offset, velocity }) => {
+              const swipe = swipePower(offset.x, velocity.x);
+
+              if (swipe < -swipeConfidenceThreshold) {
+                paginate(-1);
+              } else if (swipe > swipeConfidenceThreshold) {
+                paginate(1);
+              }
+            }}
+          >
+            {displayPanel(index)}
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </section>
   );
 }
