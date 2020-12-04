@@ -1,0 +1,83 @@
+.container {
+  background: var(--white);
+  padding: 100px 0;
+  position: relative;
+  margin-top: 200px;
+}
+
+.waveContainer {
+  position: absolute;
+  background: var(--wave);
+  height: 15vh;
+  bottom: 99%;
+  left: 0;
+  right: 0;
+  clip-path: inset(-250% 0 0 0);
+}
+.wave {
+  --speed: 5;
+  --waveHeight: 10vh;
+  height: var(--waveHeight);
+  position: absolute;
+  bottom: 90%;
+  width: 200vw;
+  opacity: 0.25;
+  -webkit-animation: wave calc(var(--speed, 0) * 3s) infinite linear;
+  animation: wave calc(var(--speed, 0) * 3s) infinite linear;
+}
+.wave path {
+  fill: var(--wave);
+}
+.wave:nth-of-type(2) {
+  --waveHeight: 8vh;
+  --speed: 8;
+  width: 400vw;
+  opacity: 0.5;
+}
+.wave:nth-of-type(3) {
+  --waveHeight: 7vh;
+  --speed: 10;
+  width: 300vw;
+  opacity: 1;
+}
+@-webkit-keyframes wave {
+  to {
+    -webkit-transform: translate(-100vw, 0);
+    transform: translate(-100vw, 0);
+  }
+}
+@keyframes wave {
+  to {
+    -webkit-transform: translate(-100vw, 0);
+    transform: translate(-100vw, 0);
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title > p {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 350px 350px 350px 350px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--white);
+  box-shadow: var(--shadow-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 400px;
+  padding: 30px;
+}

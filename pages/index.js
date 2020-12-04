@@ -1,12 +1,10 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 
-import { CallToAction, Blog, Services } from "../sections";
+import { CallToAction, Blog, Services, HowWeWork } from "../sections";
 
 export default function Index({ allPosts }) {
   return (
@@ -18,6 +16,7 @@ export default function Index({ allPosts }) {
         <Container>
           <Intro />
         </Container>
+        <HowWeWork />
         <Services />
         <Blog posts={allPosts} />
         <CallToAction />

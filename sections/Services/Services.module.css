@@ -66,18 +66,27 @@
 .service {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 
 .summaryContainer {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .summary {
   background: #210d37;
-  padding: 100px 40px 40px;
+  padding: 100px 60px 60px;
   border-radius: 50px 0 0 50px;
   box-shadow: var(--shadow-3);
+  position: relative;
+}
+
+.cornerImageContainer {
+  position: absolute;
+  top: -50px;
+  left: -30px;
 }
 
 .details {
@@ -86,6 +95,6 @@
   background: var(--white);
   border-radius: 20px;
   min-height: 400px;
-  padding: 20px;
+  padding: 60px;
   box-shadow: var(--shadow-3);
 }

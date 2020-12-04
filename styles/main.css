@@ -9,7 +9,7 @@
   --white: #ffffff;
 
   /* Usage */
-  --background: var(--lightGrey);
+  --background: var(--pink);
   --lineColor: var(--grey);
   --textColor: var(--black);
   --hColor: var(--black);
@@ -44,6 +44,9 @@
   /* Containers */
   --containerMaxWidth: 100%;
   --containerHorizontalPadding: 1.25rem;
+
+  /* Waves */
+  --wave: hsl(0, 0%, 100%);
 }
 
 /* Breakpoints */
@@ -78,6 +81,7 @@ body {
   line-height: 1.65;
   background: var(--background);
   color: var(--textColor);
+  overflow-x: hidden;
 }
 
 *:focus {
