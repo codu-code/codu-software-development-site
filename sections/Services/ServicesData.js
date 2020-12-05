@@ -13,7 +13,7 @@ export const data = [
         ],
       },
       {
-        title: "Definition",
+        title: "Definition0",
         points: [
           "User definition and audience profiling",
           "User flow creation",
@@ -28,7 +28,7 @@ export const data = [
       "Planning is crucial to a successful product build and launch. Our job in this step is to help your product vision become clear and easy to communicate. From thinking about the user experience to building an entire visual language for your product.",
     details: [
       {
-        title: "Definition",
+        title: "Definition1",
         points: [
           "User definition and audience profiling",
           "User flow creation",
@@ -36,7 +36,7 @@ export const data = [
         ],
       },
       {
-        title: "Definition",
+        title: "Definition2",
         points: [
           "User definition and audience profiling",
           "User flow creation",

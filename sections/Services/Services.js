@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
@@ -40,26 +41,36 @@ export default function Services() {
     return Math.abs(offset) * velocity;
   };
 
+  const onPanelSelect = (i) => {
+    setPanel((oldPanel) => {
+      const [oldIndex] = oldPanel;
+      return [i, oldIndex > i ? -1 : 1];
+    });
+  };
+
   const displayPanel = (key) => {
     return (
       <div className={styles.servicesContainer}>
         <div className={styles.service}>
           <div className={styles.summaryContainer}>
             <div className={styles.summary}>
+              <div className={styles.cornerImageContainer}>
+                <Image src="/images/pp.png" height={155} width={245} />
+              </div>
               <h4>{data[key].title}</h4>
               <p>{data[key].summary}</p>
             </div>
           </div>
           <div className={styles.details}>
             {data[key].details.map((item) => (
-              <>
+              <div key={item.title}>
                 <h4>{item.title}</h4>
                 <ul>
                   {item.points.map((point) => (
-                    <li>{point}</li>
+                    <li key={point}>{point}</li>
                   ))}
                 </ul>
-              </>
+              </div>
             ))}
           </div>
         </div>
@@ -81,7 +92,7 @@ export default function Services() {
           <button
             key={button}
             className={i === index ? styles.active : ""}
-            onClick={() => setPanel([i, -1])}
+            onClick={() => onPanelSelect(i)}
           >
             {button}
           </button>
