@@ -8,17 +8,6 @@
   position: relative;
 }
 
-.container::before {
-  content: "";
-  background-image: url("/images/topservices.svg");
-  background-size: cover;
-  position: absolute;
-  left: -10px;
-  right: 0;
-  height: 350px;
-  top: -10px;
-}
-
 .title {
   padding: 40px 0;
   display: flex;

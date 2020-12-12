@@ -1,56 +1,7 @@
 .container {
-  background: var(--white);
-  padding: 100px 0;
+  background: var(--lightGrey);
+  padding: 0 0 100px;
   position: relative;
-  margin-top: 200px;
-}
-
-.waveContainer {
-  position: absolute;
-  background: var(--wave);
-  height: 15vh;
-  bottom: 99%;
-  left: 0;
-  right: 0;
-  clip-path: inset(-250% 0 0 0);
-}
-.wave {
-  --speed: 5;
-  --waveHeight: 10vh;
-  height: var(--waveHeight);
-  position: absolute;
-  bottom: 90%;
-  width: 200vw;
-  opacity: 0.25;
-  -webkit-animation: wave calc(var(--speed, 0) * 3s) infinite linear;
-  animation: wave calc(var(--speed, 0) * 3s) infinite linear;
-}
-.wave path {
-  fill: var(--wave);
-}
-.wave:nth-of-type(2) {
-  --waveHeight: 8vh;
-  --speed: 8;
-  width: 400vw;
-  opacity: 0.5;
-}
-.wave:nth-of-type(3) {
-  --waveHeight: 7vh;
-  --speed: 10;
-  width: 300vw;
-  opacity: 1;
-}
-@-webkit-keyframes wave {
-  to {
-    -webkit-transform: translate(-100vw, 0);
-    transform: translate(-100vw, 0);
-  }
-}
-@keyframes wave {
-  to {
-    -webkit-transform: translate(-100vw, 0);
-    transform: translate(-100vw, 0);
-  }
 }
 
 .title {
@@ -58,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .title > p {
@@ -71,13 +23,40 @@
   justify-content: center;
 }
 
-.card {
+.cardContainer {
   background-color: var(--white);
   box-shadow: var(--shadow-3);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   height: 400px;
-  padding: 30px;
+  width: 100%;
+  position: relative;
 }
+
+.cardContainer > h4 {
+  --h4: var(--h3);
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  line-height: 2rem;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+}
+
+.card:hover {
+  opacity: 1;
+}
+
+/* Stolen from 🐻 https://codepen.io/jh3y/pen/poEvKxo */

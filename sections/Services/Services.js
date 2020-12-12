@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
 
 import styles from "./Services.module.css";
+import heroStyles from "../Hero/Hero.module.css";
 import { data, buttons } from "./ServicesData";
 
 export default function Services() {
@@ -79,6 +80,13 @@ export default function Services() {
   };
   return (
     <section className={styles.container}>
+      <div
+        className={`${heroStyles.waveContainer} ${heroStyles.waveContainerTop}`}
+      >
+        <div className={heroStyles.wave} />
+        <div className={heroStyles.wave} />
+        <div className={heroStyles.wave} />
+      </div>
       <div className={styles.title}>
         <h1>Services</h1>
         <p>
@@ -133,6 +141,13 @@ export default function Services() {
             {displayPanel(index)}
           </motion.div>
         </AnimatePresence>
+      </div>
+      <div
+        className={`${heroStyles.waveContainer} ${heroStyles.waveContainerBottom}`}
+      >
+        <div className={heroStyles.wave} />
+        <div className={heroStyles.wave} />
+        <div className={heroStyles.wave} />
       </div>
     </section>
   );
