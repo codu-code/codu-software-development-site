@@ -1,0 +1,5 @@
+.container {
+  max-width: 2250px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-4);
+}

@@ -4,12 +4,13 @@
   --blue: #0662f4;
   --purple: #480198;
   --black: #231f20;
-  --grey: #d1d3d4;
+  --grey: #dfdfdf;
   --lightGrey: #fafafa;
   --white: #ffffff;
 
   /* Usage */
   --background: var(--lightGrey);
+  --docBackground: #363636;
   --lineColor: var(--grey);
   --textColor: var(--black);
   --hColor: var(--black);
@@ -21,6 +22,8 @@
   --headingWeight: 400;
   --bodyWeight: 400;
   --baseFontSize: 112.5%;
+
+  --p: 1.25rem;
   --h1: 3.052rem;
   --h2: 2.441rem;
   --h3: 1.953rem;
@@ -79,7 +82,7 @@ body {
   font-family: var(--bodyFont);
   font-weight: var(--bodyWeight);
   line-height: 1.65;
-  background: var(--background);
+  background: var(--docBackground);
   color: var(--textColor);
 }
 
@@ -93,6 +96,7 @@ body {
 }
 
 p {
+  font-size: var(--p);
   color: var(--textColor);
   margin-bottom: 1.15rem;
   max-width: 40em;

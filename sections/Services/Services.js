@@ -8,6 +8,8 @@ import styles from "./Services.module.css";
 import heroStyles from "../Hero/Hero.module.css";
 import { data, buttons } from "./ServicesData";
 
+import { Waves } from "../../components";
+
 export default function Services() {
   const [[panel, direction], setPanel] = useState([0, 0]);
   const index = wrap(0, data.length, panel);
@@ -80,13 +82,7 @@ export default function Services() {
   };
   return (
     <section className={styles.container}>
-      <div
-        className={`${heroStyles.waveContainer} ${heroStyles.waveContainerTop}`}
-      >
-        <div className={heroStyles.wave} />
-        <div className={heroStyles.wave} />
-        <div className={heroStyles.wave} />
-      </div>
+      <Waves flip />
       <div className={styles.title}>
         <h1>Services</h1>
         <p>
@@ -142,13 +138,7 @@ export default function Services() {
           </motion.div>
         </AnimatePresence>
       </div>
-      <div
-        className={`${heroStyles.waveContainer} ${heroStyles.waveContainerBottom}`}
-      >
-        <div className={heroStyles.wave} />
-        <div className={heroStyles.wave} />
-        <div className={heroStyles.wave} />
-      </div>
+      <Waves image="/images/wave--infinite-white.svg" />
     </section>
   );
 }

@@ -1,7 +1,15 @@
 .container {
+  --p: var(--h3);
+  --hColor: var(--white);
+  --textColor: var(--white);
   background: var(--blue);
-  padding: 200px;
   position: relative;
+  background-image: url("/images/herobg.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
 }
 
 .container > * {
@@ -28,58 +36,4 @@
   border: 2px solid white;
   min-width: 200px;
   transition: 0.3s all ease-in-out;
-}
-
-.waveContainer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 12vh;
-  overflow: hidden;
-}
-
-.waveContainerBottom {
-  bottom: -1%;
-}
-
-.waveContainerTop {
-  top: -1%;
-  transform: rotate(180deg);
-}
-
-.wave {
-  animation: wave calc(var(--speed, 0) * 1s) infinite linear;
-  background-image: url("/images/wave--infinite.svg");
-  background-size: 50% 100%;
-  bottom: -5%;
-  height: calc(var(--height, 0) * 1vh);
-  left: 0;
-  opacity: var(--opacity);
-  position: absolute;
-  right: 0;
-  width: calc(var(--width, 0) * 1vw);
-  overflow: visible;
-}
-@keyframes wave {
-  to {
-    transform: translate(-50%, 0);
-  }
-}
-.wave:nth-of-type(1) {
-  --height: 12;
-  --opacity: 0.3;
-  --speed: 30;
-  --width: 800;
-}
-.wave:nth-of-type(2) {
-  --height: 12;
-  --opacity: 0.6;
-  --speed: 45;
-  --width: 800;
-}
-.wave:nth-of-type(3) {
-  --height: 6;
-  --opacity: 1;
-  --speed: 15;
-  --width: 400;
 }

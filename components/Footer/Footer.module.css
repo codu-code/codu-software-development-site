@@ -1,12 +1,10 @@
 .container {
-  --textColor: var(--white);
   --hColor: var(--white);
   --textColor: var(--white);
   position: relative;
-  height: 580px;
-  background-size: cover;
-  background-image: url("/images/footer.svg");
+  background: linear-gradient(0.25turn, var(--pink) 30%, var(--blue));
   padding-top: 240px;
+  padding-bottom: 120px;
 }
 
 .grid {

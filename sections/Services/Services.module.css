@@ -2,7 +2,7 @@
   --textColor: var(--white);
   --hColor: var(--white);
   background: linear-gradient(0.3turn, var(--pink) 30%, var(--blue));
-  padding: 140px 0 350px;
+  padding: 240px 0 350px;
   margin-bottom: -350px;
   height: 450px;
   position: relative;
