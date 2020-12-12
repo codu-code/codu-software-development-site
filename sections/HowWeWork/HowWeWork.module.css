@@ -1,6 +1,6 @@
 .container {
   background: var(--lightGrey);
-  padding: 0 0 100px;
+  padding: 60px 0 100px;
   position: relative;
 }
 

@@ -1,4 +1,4 @@
-import { PostPreview } from "../../components";
+import { PostPreview, Waves } from "../../components";
 
 import styles from "./Blog.module.css";
 
@@ -27,7 +27,7 @@ export default function Blog({ posts }) {
           );
         })}
       </div>
-      {/* <button>See More</button> */}
+      <Waves image="/images/wave--infinite-grey.svg" />
     </section>
   );
 }

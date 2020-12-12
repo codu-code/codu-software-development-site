@@ -22,8 +22,8 @@ export default function PostPreview({
             src={coverImage}
             alt={`Cover Image for ${title}`}
             className={styles.image}
-            height={350}
-            width={350}
+            height={400}
+            width={400}
           />
 
           <div>

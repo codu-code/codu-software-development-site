@@ -1,11 +1,12 @@
 import styles from "./Footer.module.css";
 
-import { Container } from "../";
+import { Container, Waves } from "../";
 
 export default function Footer() {
   return (
     <footer className={styles.container}>
       <Container>
+        <Waves flip image="/images/wave--infinite-grey.svg" />
         <div>
           <svg width="118" height="37" viewBox="0 0 118 37" fill="none">
             <path

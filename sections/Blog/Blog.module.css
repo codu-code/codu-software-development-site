@@ -1,20 +1,9 @@
 .container {
   margin-top: 350px;
-  margin-bottom: 400px;
+  padding-bottom: 300px;
+  padding-top: 200px;
   background: var(--white);
-  padding: 40px 0;
   position: relative;
-}
-
-.container::after {
-  content: "";
-  background-image: url("/images/blogbottom.svg");
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 400px;
-  bottom: -398px;
 }
 
 .title {
@@ -33,7 +22,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 350px 350px 350px;
-  gap: 30px;
+  grid-template-columns: 400px 400px 400px;
+  gap: 60px;
   justify-content: center;
 }

@@ -1,4 +1,5 @@
 .container {
+  background-color: var(--grey);
   text-align: center;
   --h4: var(--h2);
   padding: 100px 0;
