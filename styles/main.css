@@ -5,11 +5,11 @@
   --purple: #480198;
   --black: #231f20;
   --grey: #d1d3d4;
-  --lightGrey: #f4f4f4;
+  --lightGrey: #fafafa;
   --white: #ffffff;
 
   /* Usage */
-  --background: var(--pink);
+  --background: var(--lightGrey);
   --lineColor: var(--grey);
   --textColor: var(--black);
   --hColor: var(--black);
@@ -20,7 +20,7 @@
   --bodyFont: "Open Sans", sans-serif;
   --headingWeight: 400;
   --bodyWeight: 400;
-  --baseFontSize: 100%;
+  --baseFontSize: 112.5%;
   --h1: 3.052rem;
   --h2: 2.441rem;
   --h3: 1.953rem;
@@ -46,7 +46,7 @@
   --containerHorizontalPadding: 1.25rem;
 
   /* Waves */
-  --wave: hsl(0, 0%, 100%);
+  --wave: var(--lightGrey);
 }
 
 /* Breakpoints */
@@ -81,7 +81,6 @@ body {
   line-height: 1.65;
   background: var(--background);
   color: var(--textColor);
-  overflow-x: hidden;
 }
 
 *:focus {

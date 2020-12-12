@@ -6,17 +6,6 @@
   position: relative;
 }
 
-.container::before {
-  content: "";
-  background-image: url("/images/blogtop.svg");
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 350px;
-  top: -348px;
-}
-
 .container::after {
   content: "";
   background-image: url("/images/blogbottom.svg");
