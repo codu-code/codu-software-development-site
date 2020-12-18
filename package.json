@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@popmotion/popcorn": "^0.4.4",
+    "@svgr/webpack": "^5.5.0",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "framer-motion": "^2.9.4",

@@ -1,0 +1,45 @@
+.container {
+  background: var(--lightGrey);
+  padding: 60px 0 100px;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.title > p {
+  text-align: center;
+}
+
+.image {
+  position: absolute;
+  top: 100px;
+  transform: translate(calc(var(--t) * 1%), 0);
+}
+
+.content {
+  max-width: var(--containerMaxWidth);
+  margin: 0 auto;
+}
+
+.contentWrap {
+  /* width: 100vw; */
+  position: relative;
+  max-width: var(--contentMaxWidth);
+  margin: 0 auto;
+}
+
+.imageLeft {
+  left: 0%;
+  --t: -50;
+}
+
+.imageRight {
+  right: 0%;
+  --t: 60;
+}

@@ -14,7 +14,7 @@ export default function HowWeWork() {
       <div className={styles.grid}>
         <div className={styles.cardContainer}>
           <Image
-            src="/images/card2.png"
+            src="/images/icons/plan.png"
             alt={`card icon for second card`}
             className={styles.cardIcon}
             height={158}
@@ -30,7 +30,7 @@ export default function HowWeWork() {
         </div>
         <div className={styles.cardContainer}>
           <Image
-            src="/images/card2.png"
+            src="/images/icons/design.png"
             alt={`card icon for second card`}
             className={styles.cardIcon}
             height={158}
@@ -46,7 +46,7 @@ export default function HowWeWork() {
         </div>
         <div className={styles.cardContainer}>
           <Image
-            src="/images/card2.png"
+            src="/images/icons/build.png"
             alt={`card icon for second card`}
             className={styles.cardIcon}
             height={158}
@@ -62,8 +62,8 @@ export default function HowWeWork() {
         </div>
         <div className={styles.cardContainer}>
           <Image
-            src="/images/card2.png"
-            alt={`card icon for second card`}
+            src="/images/icons/deliver.png"
+            alt={`Eye in maginfying glass for delivery`}
             className={styles.cardIcon}
             height={158}
             width={181}

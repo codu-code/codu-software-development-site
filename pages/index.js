@@ -3,7 +3,14 @@ import Intro from "../components/intro";
 import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { Layout } from "../components";
-import { Hero, CallToAction, Blog, Services, HowWeWork } from "../sections";
+import {
+  Hero,
+  CallToAction,
+  Blog,
+  Services,
+  HowWeWork,
+  Codu,
+} from "../sections";
 
 export default function Index({ allPosts }) {
   return (
@@ -13,6 +20,7 @@ export default function Index({ allPosts }) {
           <title>Codú</title>
         </Head>
         <Hero />
+        <Codu />
         <HowWeWork />
         <Services />
         <Blog posts={allPosts} />

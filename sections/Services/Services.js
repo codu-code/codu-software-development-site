@@ -58,7 +58,7 @@ export default function Services() {
           <div className={styles.summaryContainer}>
             <div className={styles.summary}>
               <div className={styles.cornerImageContainer}>
-                <Image src="/images/pp.png" height={155} width={245} />
+                <Image src={data[key].imageUrl} height={200} width={200} />
               </div>
               <h4>{data[key].title}</h4>
               <p>{data[key].summary}</p>

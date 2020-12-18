@@ -47,6 +47,7 @@
   /* Containers */
   --containerMaxWidth: 100%;
   --containerHorizontalPadding: 1.25rem;
+  --contentMaxWidth: 1580px;
 
   /* Waves */
   --wave: var(--lightGrey);
